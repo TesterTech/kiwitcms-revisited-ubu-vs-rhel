@@ -6,7 +6,10 @@ Code for the YouTube video: https://youtu.be/S7h4OG7aeFA
 Ubuntu 18.04
 ```
 Optional if you want to connect to this VM using sshclient: sudo apt install openssh-server
-(to go into root: sudo -s)
+```
+Note: (to go into root type: ```sudo -s``` or ```sudo su -```)
+
+```
 docker pull kiwitcms/kiwi
 snap install docker
 mkdir kiwi && cd kiwi
