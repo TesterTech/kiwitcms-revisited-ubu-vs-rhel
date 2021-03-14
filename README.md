@@ -7,7 +7,9 @@ Ubuntu 18.04
 ```
 Optional if you want to connect to this VM using sshclient: sudo apt install openssh-server
 ```
-Note: (to go into root type: ```sudo -s``` or ```sudo su -```)
+Note: 
+- all commands are executed as root 
+- to go into root type: ```sudo -s``` or ```sudo su -```
 
 ```
 docker pull kiwitcms/kiwi
