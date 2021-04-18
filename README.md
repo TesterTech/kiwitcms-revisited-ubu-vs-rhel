@@ -13,12 +13,13 @@ Ubuntu 18.04
  sudo apt install openssh-server
 ```
 ```
-docker pull kiwitcms/kiwi
 snap install docker
-mkdir kiwi && cd kiwi
-wget https://raw.githubusercontent.com/kiwitcms/Kiwi/master/docker-compose.yml
+git clone --depth 1 https://github.com/kiwitcms/Kiwi.git kiwi-tcms/
+cd kiwi-tcms
+docker pull kiwitcms/kiwi
 docker-compose up -d
 docker exec -it kiwi_web /Kiwi/manage.py initial_setup
+
 ```
 RHEL 8.3
 ```
