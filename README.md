@@ -23,9 +23,10 @@ docker exec -it kiwi_web /Kiwi/manage.py initial_setup
 ```
 RHEL 8.3
 ```
-dnf install -y git vim-enhanced wget 
-dnf install -y podman-docker
-mkdir kiwi && cd kiwi
+sudo dnf install -y git vim-enhanced wget 
+sudo dnf install -y podman-docker
+git clone --depth 1 https://github.com/kiwitcms/Kiwi.git Kiwi
+cd Kiwi
 docker pull kiwitcms/kiwi
 wget https://raw.githubusercontent.com/kiwitcms/Kiwi/master/docker-compose.yml
 pip3 install docker-compose
@@ -33,9 +34,9 @@ pip3 install --upgrade pip
 pip3 install setuptools --upgrade
 pip3 install wheel
 pip3 install docker-compose
-/usr/local/bin/docker-compose up -d
- sudo systemctl start podman.socket
- sudo curl -H "Content-Type: application/json" --unix-socket /var/run/docker.sock http://localhost/_ping
+sudo /usr/local/bin/docker-compose up -d
+sudo systemctl start podman.socket
+sudo curl -H "Content-Type: application/json" --unix-socket /var/run/docker.sock http://localhost/_ping
 ```
 
 References:
