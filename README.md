@@ -33,7 +33,6 @@ pip3 install docker-compose
 pip3 install --upgrade pip
 pip3 install setuptools --upgrade
 pip3 install wheel
-pip3 install docker-compose
 sudo /usr/local/bin/docker-compose up -d
 sudo systemctl start podman.socket
 sudo curl -H "Content-Type: application/json" --unix-socket /var/run/docker.sock http://localhost/_ping
